@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from src.database import create_tables
 from src.routes.reviews import router as review_router
 from src.exceptions import ReviewNotFoundException, review_not_found_handler
-from src.models import ReviewCreate, Review, ReviewRead, ReviewUpdate, ReviewAverageRead, ReviewListRead
+from src import models
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     create_tables()
