@@ -1,0 +1,17 @@
+# Virtual Environment
+venv/
+
+# Python Cache & Byte-code
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local Database
+minitheatre.db
+*.sqlite3
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
