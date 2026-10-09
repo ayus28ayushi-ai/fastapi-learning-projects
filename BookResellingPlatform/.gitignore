@@ -1,0 +1,16 @@
+# Python bytecode and cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Local SQLite databases
+*.db
+booksresell.db
+
+# Environment and local configuration files
+.env
