@@ -1,0 +1,40 @@
+Environment variables (contains sensitive API keys and DB credentials)
+
+.env
+.env.*
+!.env.example
+
+Virtual Environment
+
+venv/
+env/
+ENV/
+.venv/
+
+Uploaded contract documents
+
+uploads/
+
+Python compiled files and cache directories
+
+pycache/
+*.py[cod]
+*$py.class
+*.so
+
+IDEs and Editors
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+Database & local data files
+
+*.sqlite3
+*.db
+
+OS specific files
+
+.DS_Store
+Thumbs.db
