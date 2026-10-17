@@ -8,6 +8,12 @@ db= client.get_database("mydb")
 contracts_collection = db["contracts"]
 analysis_collection =  db["analysis"]
 
+try:
+    analysis_collection.drop_index("analysis_id_1")
+    print("Successfully dropped obsolete analysis_id_1 index!")
+except Exception as e:
+    print(f"Index already dropped or not found: {e}")
+
 def init_db():
     contracts_collection.create_index("contract_id", unique = True)
-    analysis_collection.create_index("analysis_id", unique=True)
+    

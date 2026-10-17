@@ -42,7 +42,7 @@ class RiskFlag(BaseModel):
     clause_reference: str = ""
 
 class AnalysisResult(BaseModel):
-    id: Optional[str] = None
+    id: str = Field(default_factory=lambda: uuid.uuid4().hex)
     contract_id: str
     analysis_date: str = ""
     summary: str = ""
