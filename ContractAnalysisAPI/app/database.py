@@ -8,9 +8,10 @@ db= client.get_database("mydb")
 contracts_collection = db["contracts"]
 analysis_collection =  db["analysis"]
 
+# fixing duplication error
 try:
     analysis_collection.drop_index("analysis_id_1")
-    print("Successfully dropped obsolete analysis_id_1 index!")
+    print("Successfully dropped unused analysis_id_1 index!")
 except Exception as e:
     print(f"Index already dropped or not found: {e}")
 
