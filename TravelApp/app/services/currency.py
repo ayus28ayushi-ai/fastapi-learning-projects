@@ -1,5 +1,6 @@
 from app.services.cache import get_cache, set_cache
 import httpx
+from app.config import CURRENCY_EXCHANGE_API_KEY
 
 async def fetch_currency(basecurrency: str):
     cache_key = f"{basecurrency}_currency"
@@ -10,7 +11,7 @@ async def fetch_currency(basecurrency: str):
 
     async with httpx.AsyncClient() as client:
         response = await client.get(
-            f"https://v6.exchangerate-api.com/v6/665ab8f47936d5955df1160b/latest/{basecurrency}"
+            f"https://v6.exchangerate-api.com/v6/{CURRENCY_EXCHANGE_API_KEY}/latest/{basecurrency}"   
         )
         response.raise_for_status()
         data = response.json()

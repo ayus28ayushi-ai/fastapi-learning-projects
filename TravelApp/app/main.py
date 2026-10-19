@@ -18,7 +18,7 @@ async def root():
         "version": "1.0.0",
         "endpoints":{
             "POST /plan": "Create a travel plan (Aggregated)",
-            "GET /plan/stream": "Stream the travel plan (SSE)",
+            "POST /plan/stream": "Stream the travel plan (SSE)",
             "GET /plan/cache-stats": "Get cache statistics",
             "DELETE /plan/cache": "Clear the cache"
         }
