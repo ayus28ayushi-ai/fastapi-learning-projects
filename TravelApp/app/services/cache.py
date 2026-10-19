@@ -33,3 +33,6 @@ def set_cache(
 # function to clear the cache
 def clear_cache() -> None:
     cache.clear()
+
+def get_all_cache():
+    return cache

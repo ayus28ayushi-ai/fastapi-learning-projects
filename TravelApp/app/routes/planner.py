@@ -4,7 +4,7 @@ from app.services.weather import fetch_weather
 from app.services.place import fetch_places
 from app.services.currency import fetch_currency
 import asyncio
-
+from app.services.cache import clear_cache, get_all_cache
 router = APIRouter(
     prefix="/plan", 
     tags=["Travel Plan"]
@@ -49,3 +49,15 @@ async def create_travel_plan(travel_req: TravelRequestModel):
         "places": places,
         "currency": currency_data
     }
+
+@router.delete("/cache")
+async def delete_cache():
+    clear_cache()
+    return {
+        "message": "Cache cleared successfully",
+        "cache": get_all_cache()
+    }
+
+@router.get("/cache-stats")
+async def get_cache_stats():
+    return get_all_cache()
