@@ -24,7 +24,7 @@ async def create_travel_plan(travel_req: TravelRequestModel):
         raise HTTPException(status_code=400, detail="Trip duration must be at least 1 day")
 
     """ this way instead of having three awaits that was blocking , one would wait for the other to finish, 
-        using this asyncio, we can run them together without them blocking each other
+        using this asyncio, we can run them together (in parallel) without them blocking each other
     """
    
     weather_data, places, currency_data = await asyncio.gather(
