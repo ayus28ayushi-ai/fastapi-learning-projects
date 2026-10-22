@@ -124,4 +124,5 @@ Interactive API documentation will be available at `http://127.0.0.1:8000/docs`.
 ## Author
 
  **Ayushi Singh** 
+ 
  **GitHub Profile:** https://github.com/ayus28ayushi-ai
